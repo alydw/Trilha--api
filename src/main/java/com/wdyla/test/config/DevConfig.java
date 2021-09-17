@@ -1,4 +1,4 @@
-package com.wdyla.test.config;
+package com.wdyla.test.config;					
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
