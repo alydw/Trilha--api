@@ -3,12 +3,13 @@ package com.wdyla.test.service;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Service;
 import com.wdyla.test.domain.Categoria;
 import com.wdyla.test.domain.Livro;
 import com.wdyla.test.repositories.CategoriaRepository;
 import com.wdyla.test.repositories.LivroRepository;
 
+@Service
 public class DBService {
 	@Autowired
 	private CategoriaRepository categoriaRepository;
