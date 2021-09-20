@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.wdyla.test.domain.Categoria;
+import com.wdyla.test.dtos.CategoriaDTO;
 import com.wdyla.test.repositories.CategoriaRepository;
 import com.wdyla.test.service.exceptions.ObjectNotFoundException;
 
@@ -27,6 +28,13 @@ public class CategoriaService {
 
 	public Categoria create(Categoria obj) {
 		obj.setId(null);
+		return repository.save(obj);
+	}
+
+	public Categoria update(Integer id, CategoriaDTO objDTO) {
+		Categoria obj = findById(id);
+		obj.setNome(objDTO.getNome());
+		obj.setDescricao(obj.getDescricao());
 		return repository.save(obj);
 	}
 }
